@@ -1,0 +1,23 @@
+
+@font-face{
+    font-family: tipografia;
+    src: url(tipografia.ttf );
+}
+.body {
+    background-image: url("backbround.jpg");
+    background-color: #cccccc;
+  }
+  
+
+
+.texto{
+    text-align: center;
+    font-size: xx-large;
+    font-family: tipografia;
+}
+
+.texto2{
+    text-align: center;
+    font-size:large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
