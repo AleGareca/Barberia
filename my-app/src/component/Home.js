@@ -7,8 +7,6 @@ import moment from "moment";
 import '../css/style.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-
-
 export default class Home extends Component {
 constructor() {
     super();
