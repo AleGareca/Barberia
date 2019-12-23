@@ -1,16 +1,9 @@
 import React, { Component } from 'react'
-import NavBar from './NavBar';
-import Carrucel from './Carrucel';
-import Body from './Body';
 import {Calendar,momentLocalizer} from "react-big-calendar";
 import moment from "moment";
-import '../css/style.css';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-
-
-export default class Home extends Component {
-constructor() {
+export default class MyCalendar extends Component {
+ constructor() {
     super();
     const now = new Date();
     const events = [
@@ -127,36 +120,23 @@ constructor() {
     ]
 
     this.state = {
+              name: 'React',
               events
     };
-
-  }
-
-    render() {
-        return (
-            <div>
-                <NavBar/>
-                <Carrucel/>
-                <Body/>
-                <h1>Calendario de turnos Asignado</h1>
-                <MyCalendar events={this.state.events}/>
-            </div>
-        )
-    }
-}
 
    const localizer = momentLocalizer(moment);
 
    const MyCalendar = props => (
      <div>
-       <div style={{ height: '500pt'}}>
-        <Calendar
-          events={props.events}
-          startAccessor="start"
-          endAccessor="end"
-          defaultDate={moment().toDate()}
-          localizer={localizer}
-        />
-       </div>
+      <Calendar
+        localizer={localizer}
+        events={this.state.events}
+        startAccessor="start"
+        endAccessor="end"
+        defaultDate={moment().toDate()}
+      />
      </div>
    )
+
+ }
+}
